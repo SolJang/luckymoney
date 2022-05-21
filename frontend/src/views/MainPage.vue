@@ -5,10 +5,17 @@
     <br />
     <br />
     <button @click="moveLoopSample()">moveLoopSample 페이지로 이동</button>
+    <br />
+    <br />
+    <button @click="moveServerSample()">클릭하면 서버통신</button>
   </div>
 </template>
 
 <script>
+import {getAxiosWithMessage} from "../../public/static/js/request";
+import {TEST_URL} from "../../public/static/js/api";
+import {SERVICE_ERROR} from "../../public/static/js/msg";
+
 export default {
   name: "MainPage",
   data() {
@@ -118,6 +125,28 @@ export default {
         //query
       });
     },
+    moveServerSample: async function() {
+      let params = {
+        id : "0101111",
+        name : "jangsol"
+      }
+
+      console.log("params : ", params);
+      await getAxiosWithMessage(
+        TEST_URL,
+        params,
+        res => {
+          console.log(res);
+          if(res.status === 0 ){
+            alert("[" + res.message + "] " + res.result);
+          }
+        },
+        err => {
+          console.log(err);
+          alert(SERVICE_ERROR);
+        }
+      )
+    }
   },
 };
 </script>
