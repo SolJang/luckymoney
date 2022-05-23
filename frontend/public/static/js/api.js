@@ -1,1 +1,0 @@
-export const TEST_URL = "/api/v1/test";
