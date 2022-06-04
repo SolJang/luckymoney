@@ -2,6 +2,7 @@ package com.chuseok.luckymoney.web.test;
 
 import com.chuseok.luckymoney.web.ApiResponse;
 import com.chuseok.luckymoney.web.test.dto.TestRequest;
+import com.chuseok.luckymoney.web.test.service.TestService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
