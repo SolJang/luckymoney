@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chuseok.luckymoney.web.test.mapper.LuckyMapper">
+    <insert id="createLuckyBox" parameterType="com.chuseok.luckymoney.web.test.dto.LuckyBoxRequest">
+        INSERT INTO lucky.LUCKY_PARENT_BOX
+            (LUCKY_PARENT_SEQ, BOX_MASTER_EMAIL, NICKNAME, BOX_COLOR, CREATE_DATE)
+        VALUES
+            (0, #{boxMasterEmail}, #{nickname}, #{boxColor}, sysdate())
+    </insert>
+</mapper>
