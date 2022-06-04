@@ -1,4 +1,4 @@
-package com.chuseok.luckymoney.web.test;
+package com.chuseok.luckymoney.web.test.service;
 
 import com.chuseok.luckymoney.web.test.mapper.TestMapper;
 import lombok.extern.slf4j.Slf4j;

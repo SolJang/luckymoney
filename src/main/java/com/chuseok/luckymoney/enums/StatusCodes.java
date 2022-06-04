@@ -11,7 +11,10 @@ public enum StatusCodes {
     SUCCESS(0, "SUCCESS"),
     NOT_FOUNT(404, "요청 자원을 찾을 수 없습니다."),
     INTERNAL_SERVER_ERROR(500, "서버 에러"),
-    VALIDATION_ERROR(9999, "서버 에러");
+    VALIDATION_ERROR(9999, "서버 에러"),
+
+    ESSENTIAL_DATA_NOT_FOUND(1001, "필수 데이터를 찾을 수 없습니다."),
+    NOT_EMAIL_FORMAT(1002, "이메일 형식을 확인해주세요.");
 
     private final int code;
     @Getter private final String message;
